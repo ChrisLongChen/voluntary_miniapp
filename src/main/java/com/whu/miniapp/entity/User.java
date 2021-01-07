@@ -48,8 +48,8 @@ public class User {
     private String team_name;//社团/机构/组织名称
     @Column(name = "team_picture")
     private String team_picture;//证明文件图片
-    @Column(name = "team_info")
-    private String team_info;//认证说明
+    @Column(name = "team_intro")
+    private String team_intro;//认证说明
     @Column(name = "team_status")
     private Integer team_status;//是否认证
     @Column(name = "login_time")
@@ -199,12 +199,12 @@ public class User {
         this.team_picture = team_picture;
     }
 
-    public String getTeam_info(){
-        return team_info;
+    public String getTeam_intro(){
+        return team_intro;
     }
 
-    public void setTeam_info(String team_info){
-        this.team_info = team_info;
+    public void setTeam_intro(String team_intro){
+        this.team_intro = team_intro;
     }
 
     public Integer getTeam_status(){

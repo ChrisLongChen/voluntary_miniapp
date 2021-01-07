@@ -4,13 +4,13 @@
 
 <mapper namespace="com.whu.miniapp.mapper.UserMapper">
 
-    <insert id="insertUser" useGeneratedKeys="true" keyProperty="id" parameterType="com.whu.miniapp.entity.User">
+    <insert id="insertUser" useGeneratedKeys="true" keyProperty="user_id" parameterType="com.whu.miniapp.entity.User">
         insert into user (user_name, user_passcode, user_gender, user_age, user_career, user_phone, user_addr,
         wechat_id, wechat_pic, user_status, ban_time, ban_unit, user_type, team_phone, team_addr, team_name,
-        team_picture, team_info, team_status, login_time)
+        team_picture, team_intro, team_status, login_time)
         values (#{user_name}, #{user_passcode}, #{user_gender}, #{user_age}, #{user_career}, #{user_phone}, #{user_addr},
         #{wechat_id}, #{wechat_pic}, #{user_status}, #{ban_time}, #{ban_unit}, #{user_type}, #{team_phone}, #{team_addr},
-        #{team_name}, #{team_picture}, #{team_info}, #{team_status}, #{login_time})
+        #{team_name}, #{team_picture}, #{team_intro}, #{team_status}, #{login_time})
     </insert>
 
     <select id="findUserByUsername" resultType="com.whu.miniapp.entity.User">

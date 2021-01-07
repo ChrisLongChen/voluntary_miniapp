@@ -21,7 +21,7 @@ import java.util.List;
  */
 
 @RestController
-@RequestMapping(value = "/user")
+@RequestMapping(value = "/user",method = RequestMethod.GET)
 public class UserController {
     @Autowired(required = false)
     private UserMapper userMapper;
